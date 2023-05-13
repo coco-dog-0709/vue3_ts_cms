@@ -48,3 +48,7 @@ npm run commit
 - 高级组件的封装-GForm、GTable 的封装
 
 - Echarts 的使用和封装
+
+- 项目部署上线
+
+- 其他...
