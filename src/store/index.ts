@@ -76,7 +76,7 @@ export function initLoginStates() {
   //4.获取用户的按钮权限:
   //这里不知道在根store中如何去获取loginModule下的userMenus，暂时只能通过cache去获取
   const userMenus = cache.getCache('userMenus')
-  if (userMenus.length > 0) {
+  if (userMenus?.length > 0) {
     const userPermissions = getButtonPermission(userMenus)
     store.commit('setUserPermissions', userPermissions)
   }
