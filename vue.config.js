@@ -1,5 +1,5 @@
 module.exports = {
-  outputDir: './dist',
+  outputDir: './build',
   configureWebpack: {
     resolve: {
       alias: {
