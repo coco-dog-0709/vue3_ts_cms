@@ -10,6 +10,8 @@ import router from '@/router'
 
 import { cache } from '@/utils'
 
+import { getUserRoutes } from '@/global'
+
 const loginModule: Module<ILoginState, IrooteState> = {
   namespaced: true,
   state() {
@@ -28,6 +30,14 @@ const loginModule: Module<ILoginState, IrooteState> = {
     },
     setUserMenus(stete, userMenus) {
       stete.userMenus = userMenus
+
+      // 动态添加用户路由:
+      if (userMenus) {
+        const userRoutes = getUserRoutes(userMenus)
+        userRoutes.forEach((route) => {
+          router.addRoute('main', route)
+        })
+      }
     }
   },
   getters: {},

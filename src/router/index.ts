@@ -4,8 +4,6 @@ import type { RouteRecordRaw } from 'vue-router'
 
 import { cache } from '@/utils'
 
-import { getUserRoutes } from '@/global'
-
 //routes应该有类型
 const routes: RouteRecordRaw[] = [
   {
@@ -33,15 +31,6 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes
 })
-
-// 动态添加用户路由:
-const userMenus = cache.getCache('userMenus')
-if (userMenus) {
-  const userRoutes = getUserRoutes(userMenus)
-  userRoutes.forEach((route) => {
-    router.addRoute('main', route)
-  })
-}
 
 router.beforeEach((to) => {
   if (to.path !== '/login') {
