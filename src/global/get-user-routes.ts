@@ -43,9 +43,6 @@ function getUserRoutes(userMenus: any): RouteRecordRaw[] {
 export function getMenuIdByPath(userMenus: any, currentPath: any): any {
   for (const menu of userMenus) {
     if (menu.type === 2 && menu.url === currentPath) {
-      if (menu.children?.length > 0) {
-        return menu.children[0]
-      }
       return menu
     } else if (menu.children?.length > 0) {
       const matchMenu = getMenuIdByPath(menu.children, currentPath)
