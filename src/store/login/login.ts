@@ -30,17 +30,13 @@ const loginModule: Module<ILoginState, IrooteState> = {
     },
     setUserMenus(stete, userMenus) {
       stete.userMenus = userMenus
-
       // 动态添加用户路由:
-      if (userMenus) {
-        const userRoutes = getUserRoutes(userMenus)
-        userRoutes.forEach((route) => {
-          router.addRoute('main', route)
-        })
-      }
+      const userRoutes = getUserRoutes(userMenus)
+      userRoutes.forEach((route) => {
+        router.addRoute('main', route)
+      })
     }
   },
-  getters: {},
   actions: {
     //账号登录:
     async accountLoginAction({ commit, dispatch }, payload: IAccount) {

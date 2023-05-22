@@ -10,5 +10,5 @@ import { cache } from '@/utils'
 export default function (pageName: string, permissionType: string): boolean {
   const userPermissions = cache.getCache('userPermissions')
   const permission = `system:${pageName}:${permissionType}`
-  return !!userPermissions.find((item: string) => item === permission)
+  return !!userPermissions?.find((item: string) => item === permission)
 }

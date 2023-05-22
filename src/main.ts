@@ -18,10 +18,10 @@ app.use的参数如果是一个函数，会自动将app传入这个函数，
 */
 app.use(globalRegister)
 
-app.use(router)
-
-//用户刷新页面时初始化loginModule/state的状态
+//用户刷新页面时初始化loginModule/state的状态,一定要在use(router之前执行)
 initLoginStates()
+
+app.use(router)
 
 app.use(store)
 app.mount('#app')
