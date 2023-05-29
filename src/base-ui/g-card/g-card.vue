@@ -2,7 +2,7 @@
   <div class="g-card">
     <el-card :shadow="shadow">
       <template #header>
-        <span>{{ title }}</span>
+        <span class="header">{{ title }}</span>
       </template>
       <slot>
         <div>Content</div>
@@ -32,4 +32,11 @@ export default defineComponent({
 })
 </script>
 
-<style scoped></style>
+<style lang="less" scoped>
+.g-card {
+  margin-bottom: 20px;
+  .header {
+    font-weight: 700;
+  }
+}
+</style>
