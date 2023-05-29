@@ -5,7 +5,7 @@
       <!-- 通用插槽 --start -->
       <template #headerOperate>
         <el-button :disabled="!createPermission" type="primary" size="small" @click="handleAdd">{{
-          tableConfig.rightButtonText
+          tableConfig.rightButtonText || '新增'
         }}</el-button>
         <el-button class="el-icon-refresh" size="small"></el-button>
       </template>

@@ -82,7 +82,6 @@ const components = [
   ElCard,
   ElDescriptions,
   ElDescriptionsItem,
-  ElLink,
   ElTag
 ]
 

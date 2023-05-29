@@ -86,11 +86,9 @@ export default defineComponent({
   emits: ['update:pagination'],
   setup(props, { emit }) {
     const handleSizeChange = (pageSize: number) => {
-      console.log(pageSize)
       emit('update:pagination', { ...props.pagination, pageSize })
     }
     const handleCurrentChange = (currentPage: number) => {
-      console.log(currentPage)
       emit('update:pagination', { ...props.pagination, currentPage })
     }
     return {

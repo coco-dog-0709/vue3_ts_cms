@@ -52,5 +52,6 @@ export const tableConfig: ITableConfig = {
       children: 'children'
     }
   },
+  rightButtonText: '新增',
   showFooter: false
 }

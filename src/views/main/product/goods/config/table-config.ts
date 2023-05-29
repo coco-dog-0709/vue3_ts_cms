@@ -54,6 +54,7 @@ export const tableConfig: ITableConfig = {
       slotName: 'operate'
     }
   ],
+  rightButtonText: '新增',
   showIndexColumn: true,
   showSelectColumn: true
 }
